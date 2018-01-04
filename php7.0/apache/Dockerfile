@@ -40,6 +40,8 @@ RUN { \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
 RUN a2enmod rewrite expires
+RUN a2enmod ssl
+RUN a2enmod proxy_http
 
 VOLUME /var/www/html
 
